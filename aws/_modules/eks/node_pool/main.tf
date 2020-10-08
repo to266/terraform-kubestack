@@ -15,6 +15,4 @@ resource "aws_eks_node_group" "nodes" {
 
   tags   = var.eks_metadata_tags
   labels = var.metadata_labels
-
-  depends_on = [var.depends-on-aws-auth]
 }

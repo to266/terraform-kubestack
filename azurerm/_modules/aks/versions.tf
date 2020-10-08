@@ -21,9 +21,19 @@ terraform {
       version = "~> 1.12.0"
     }
 
+    kustomization = {
+      source  = "kbst/kustomization"
+      version = ">= 0.2"
+    }
+
     random = {
       source  = "hashicorp/random"
       version = "~> 2.3.0"
+    }
+
+    template = {
+      source  = "hashicorp/template"
+      version = "~> 2.1.2"
     }
   }
 
