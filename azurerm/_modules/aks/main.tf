@@ -81,4 +81,8 @@ resource "azurerm_kubernetes_cluster" "current" {
   }
 
   tags = var.metadata_labels
+
+  lifecycle {
+    ignore_changes = [microsoft_defender[0].log_analytics_workspace_id]
+  }
 }
